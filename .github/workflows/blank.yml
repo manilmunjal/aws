@@ -22,7 +22,8 @@ jobs:
       #     npm run build
 
       - name: Build Docker Image
-        run: docker build -t manilmunjal/HelloWorld.java:latest .
+        run: docker build -t manilmunjal/helloworld:latest .
+
 
       - name: Push Docker Image to Docker Hub
-        run: docker push manilmunjal/HelloWorld.java:latest
+        run: docker push manilmunjal/helloworld:latest
