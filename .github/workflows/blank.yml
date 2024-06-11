@@ -27,3 +27,7 @@ jobs:
 
       - name: Push Docker Image to Docker Hub
         run: docker push manilmunjal/helloworld:latest
+       
+      - name: Run Docker container
+        run: docker run manilmunjal/helloworld:latest
+
