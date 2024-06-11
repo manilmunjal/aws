@@ -81,7 +81,7 @@ jobs:
 
       - name: Push Docker image to ECR
         run: |
-              aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 694749494213.dkr.ecr.ap-south-1.amazonaws.com
+              aws ecr get-login --region ap-south-1 --no-include-email | bash
               docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/helloworld:latest
      
       - name: Deploy to ECS
